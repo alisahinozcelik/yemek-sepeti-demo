@@ -1,0 +1,25 @@
+#header {
+	padding-top: 50px;
+
+	.bg {
+		background-color: $header-color;
+		height: 50px;
+	}
+
+	.container {
+		position: relative;
+		top: -50px;
+	}
+}
+
+#site-logo {
+	font-size: 100px;
+	font-weight: bold;
+	line-height: 1;
+	color: $header-color;
+	@include stroke($body-bg-color, 2px);
+
+	@include onSmall {
+		font-size: 80px;
+	}
+}

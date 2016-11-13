@@ -1,0 +1,79 @@
+<html lang="tr">
+	<head>
+		<title>Yemek Sepeti Demo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+		<script src="/webpack-dev-server.js"></script>
+	</head>
+	<body>
+		<header id="header">
+			<div class="bg">
+				<div class="container">
+					<div id="site-logo">YS Demo</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<h1 class="container"></h1>
+			<div id="restoran" class="container">
+				<div class="scores">
+					<div class="score" id="speed-score">
+						<div class="content">
+							<h5>Hız</h5>
+							<span></span>
+						</div>
+					</div>
+					<div class="score" id="serving-score">
+						<div class="content">
+							<h5>Servis</h5>
+							<span></span>
+						</div>
+					</div>
+					<div class="score" id="flavour-score">
+						<div class="content">
+							<h5>Lezzet</h5>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="details-container">
+					<div class="detail" id="min-price">
+						<h5>Minimum Paket Tutarı</h5>
+						<span></span>
+					</div>
+					<div class="detail" id="working-hours">
+						<h5>Çalışma Saatleri (bugün)</h5>
+						<span></span>
+					</div>
+					<div class="detail" id="delivery-time">
+						<h5>Servis Süresi (ortalama)</h5>
+						<span></span>
+					</div>
+				</div>
+				<div id="restoran-logo"></div>
+			</div>
+			<div class="container">
+				<input type="text" id="search" placeholder="Menüde ara...">
+			</div>
+			<div class="container results">
+				<table class="cart-container">
+					<thead>
+						<tr>
+							<th colspan="4">Sepet</td>
+						</tr>
+					</thead>
+					<tbody id="cart"></tbody>
+					<tfoot>
+						<tr>
+							<td colspan="2">Toplam</td>
+							<td colspan="2" id="total"></td>
+						</tr>
+					</tfoot>
+				</table>
+				<div id="list"></div>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+}
+
+body,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+body {
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	background-color: $body-bg-color;
+	color: rgba(0,0,0,0.87);
+	padding-bottom: 50px;
+}
+
+.container {
+	width: 90%;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include onSmall {
+		width: 97%;
+	}
+}
+
+.tar {
+	text-align: right;
+}
+
+.results {
+	display: flex;
+
+	@include onSmall {
+		display: block;
+	}
+}

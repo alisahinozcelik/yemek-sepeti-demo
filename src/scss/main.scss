@@ -1,0 +1,33 @@
+$header-color: cornflowerblue;
+$body-bg-color: #eff0f2;
+$soft-bg: lighten($body-bg-color, 2);
+$border-color: darken($body-bg-color, 10);
+$green: #4CAF50;
+
+@mixin stroke($color, $spread: 1px) {
+  text-shadow:
+		$spread * -1 $spread * -1 0 $color,  
+		$spread $spread * -1 0 $color,
+		$spread * -1 $spread 0 $color,
+		$spread $spread 0 $color;
+}
+
+@mixin verticalCentered() {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin onSmall() {
+	@media screen and (max-width: 900px) {
+		@content;
+	}
+}
+
+@import './layout';
+@import './header';
+@import './restoran';
+@import './search';
+@import './list';
+@import './cart';

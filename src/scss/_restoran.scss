@@ -1,0 +1,92 @@
+#restoran {
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid $border-color;
+	background-color: $soft-bg;
+
+	@include onSmall() {
+		flex-flow: column;
+	}
+
+	> * {
+		display: inline-block;
+		width: auto;
+		padding: 20px;
+		text-align: center;
+	}
+
+	.scores,
+	.details-container {
+		display: flex;
+		border-right: 1px solid $border-color;
+		justify-content: space-around;
+
+		@include onSmall {
+			width: 100%;
+			border-right: none;
+			border-bottom: 1px solid $border-color;
+		}
+	}
+
+	.score {
+		position: relative;
+		width: 100px;
+		height: 100px;
+
+		.content {
+			position: absolute;
+			@include verticalCentered;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.detail {
+		@include verticalCentered;
+		padding: 0 10px;
+		justify-content: space-between;
+
+		&:before {
+			content: "";
+		}
+
+		h5 {
+			font-weight: normal;
+		}
+
+		span {
+			white-space: nowrap;
+			font-weight: bold;
+		}
+	}
+
+	#restoran-logo {
+		width: 100%;
+		max-width: 200px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-origin: content-box;
+		background-size: contain;
+
+		@include onSmall {
+			max-width: initial;
+			height: 100px;
+		}
+	}
+
+	svg {
+		transform-origin: center;
+		transform: rotate(-90deg);
+	}
+
+	circle {
+		fill: transparent;
+		stroke-width: 10;
+		stroke-dasharray: 251;
+		stroke-dashoffset: 251;
+		stroke: $green;
+		transition: all 1s ease-out;
+	}
+}

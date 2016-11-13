@@ -1,0 +1,62 @@
+#list {
+	width: 100%;
+	background-color: $soft-bg;
+	border: 1px solid $border-color;
+	padding: 10px 20px;
+
+	h5 {
+		margin: 20px 0;
+		font-size: 24px;
+		display: flex;
+		white-space: nowrap;
+		overflow: hidden;
+
+		&:after {
+			content: "";
+			display: block;
+			width: 100%;
+			margin-left: 20px;
+			background-image: linear-gradient($border-color, $border-color);
+			background-repeat: no-repeat;
+			background-size: 100% 2px;
+			background-position: center;
+		}
+	}
+
+	.product {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 10px;
+
+		.details {
+			width: 100%;
+			padding: 0 20px;
+
+			h6 {
+				font-size: 18px;
+			}
+
+			p {
+				color: gray;
+			}
+		}
+
+		.price {
+			min-width: 100px;
+			text-align: right;
+		}
+
+		.count-container {
+			white-space: nowrap;
+
+			input {
+				width: 35px;
+			}
+
+			button {
+				cursor: pointer;
+			}
+		}
+	}
+}
